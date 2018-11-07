@@ -10,7 +10,7 @@ func GetFuncs() map[string]interface{} {
 		"Three": problems.Three,
 		"Four": problems.Four,
 		"Five": problems.Five,
-		// "Six": problems.Six,
+		"Six": problems.Six,
 		// "Seven": problems.Seven,
 		// "Eight": problems.Eight,
 		// "Nine": problems.Nine,
