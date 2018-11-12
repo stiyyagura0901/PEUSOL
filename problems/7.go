@@ -2,16 +2,30 @@ package problems
 
 import (
 	"fmt"
-	"math"
 )
 
 func isPrime(value int) bool {
-	for i := 2; i <= int(math.Floor(float64(value)/2)); i++ {
-		if value%i == 0 {
-			return false
+	if value == 2 { return true }
+	if value == 3 { return true }
+	if value % 2 == 0 { return false }
+	if value % 3 == 0 { return false }
+
+	i := 5;
+	w := 2;
+
+	for {
+		if (i*i <= value) {
+			if value % i == 0 {
+				return false
+			}
+			i += w
+			w = 6 - w
+		} else {
+			break
 		}
 	}
-	return value > 1
+
+	return true
 }
 
 // Seven ...
